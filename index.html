@@ -1,220 +1,135 @@
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guia de Picaretas do Minecraft</title>
+    <!-- Importação das fontes estilo Pixel / Minecraft -->
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-body {
-    /* Imagem do Minecraft no fundo do site */
-    background: url('https://images.unsplash.com/photo-1627856013091-fed6e4e30025?q=80&w=1920&auto=format&fit=crop') no-repeat center center fixed;
-    background-size: cover;
-    color: #e0e0e0;
-    font-family: 'VT323', monospace;
-    padding: 20px;
-    display: flex;
-    justify-content: center;
-    position: relative;
-    min-height: 100vh;
-}
+    <div class="container">
+        <!-- Banner Principal -->
+        <header>
+            <h1>Guia de Picaretas</h1>
+            <p>Evolução, atributos e utilidades de cada ferramenta no Minecraft</p>
+        </header>
 
-/* Camada escura sobre a imagem para destacar as caixas */
-.overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(10, 8, 7, 0.65);
-    z-index: 1;
-}
+        <!-- Lista / Grid das Picaretas -->
+        <main class="grid">
 
-.container {
-    max-width: 900px;
-    width: 100%;
-    position: relative;
-    z-index: 2;
-}
+            <!-- Picareta de Madeira -->
+            <div class="card wood-card">
+                <div class="card-icon">
+                    <img src="https://raw.githubusercontent.com/misode/assets/main/assets/minecraft/textures/item/wooden_pickaxe.png" alt="Picareta de Madeira">
+                </div>
+                <div class="card-content">
+                    <div class="card-header">
+                        <h2 class="pickaxe-title wood">Picareta de Madeira</h2>
+                        <span class="badge">Durabilidade: 59 | Velocidade: 2x</span>
+                    </div>
+                    <p class="description">A primeira ferramenta de todo jogador. Utilizada principalmente para minerar pedregulho e iniciar a jornada no jogo. Não minera minérios de ferro, ouro ou diamantes.</p>
+                </div>
+            </div>
 
-/* CAIXAS DESENHADAS EM PIXEL ART (Pixel Border) */
-.pixel-box {
-    background-color: rgba(30, 24, 21, 0.92);
-    border: 4px solid #000000;
-    position: relative;
-    box-shadow: 
-        0 -4px 0 -1px #4a382c,
-        0 4px 0 -1px #140d0a,
-        -4px 0 0 -1px #4a382c,
-        4px 0 0 -1px #140d0a,
-        inset -4px -4px 0px #140d0a,
-        inset 4px 4px 0px #634b3c;
-}
+            <!-- Picareta de Pedra -->
+            <div class="card stone-card">
+                <div class="card-icon">
+                    <img src="https://raw.githubusercontent.com/misode/assets/main/assets/minecraft/textures/item/stone_pickaxe.png" alt="Picareta de Pedra">
+                </div>
+                <div class="card-content">
+                    <div class="card-header">
+                        <h2 class="pickaxe-title stone">Picareta de Pedra</h2>
+                        <span class="badge">Durabilidade: 131 | Velocidade: 4x</span>
+                    </div>
+                    <p class="description">Feita com pedregulho (cobblestone). É a transição essencial do início do jogo que permite minerar Minério de Ferro, Cobre, Carvão e Lapis Lazuli com facilidade.</p>
+                </div>
+            </div>
 
-/* Header Desenhado */
-.header-box {
-    background-color: rgba(44, 34, 30, 0.95);
-    text-align: center;
-    margin-bottom: 25px;
-    padding: 20px;
-}
+            <!-- Picareta de Cobre -->
+            <div class="card copper-card">
+                <div class="card-icon">
+                    <img src="https://raw.githubusercontent.com/misode/assets/main/assets/minecraft/textures/item/copper_ingot.png" alt="Cobre" class="copper-icon">
+                </div>
+                <div class="card-content">
+                    <div class="card-header">
+                        <h2 class="pickaxe-title copper">Picareta de Cobre</h2>
+                        <span class="badge">Durabilidade: ~190 | Nível: Intermediário</span>
+                    </div>
+                    <p class="description">Posiciona-se entre a de pedra e a de ferro em addons, mods e conceitos da comunidade. Oferece boa eficiência e dá uma utilidade valiosa ao cobre abundante no subsolo.</p>
+                </div>
+            </div>
 
-.header-box h1 {
-    font-family: 'Press Start 2P', cursive;
-    font-size: 1.6rem;
-    color: #55FF55;
-    text-shadow: 3px 3px 0px #005500, 4px 4px 0px #000000;
-    margin-bottom: 12px;
-    line-height: 1.3;
-}
+            <!-- Picareta de Ferro -->
+            <div class="card iron-card">
+                <div class="card-icon">
+                    <img src="https://raw.githubusercontent.com/misode/assets/main/assets/minecraft/textures/item/iron_pickaxe.png" alt="Picareta de Ferro">
+                </div>
+                <div class="card-content">
+                    <div class="card-header">
+                        <h2 class="pickaxe-title iron">Picareta de Ferro</h2>
+                        <span class="badge">Durabilidade: 250 | Velocidade: 6x</span>
+                    </div>
+                    <p class="description">A ferramenta cavalo de batalha do jogo. É o nível mínimo necessário para minerar Minério de Diamante, Ouro, Redstone e Esmeraldas. Indispensável para o progresso.</p>
+                </div>
+            </div>
 
-.header-box p {
-    font-size: 1.4rem;
-    color: #aaaaaa;
-}
+            <!-- Picareta de Ouro -->
+            <div class="card gold-card">
+                <div class="card-icon">
+                    <img src="https://raw.githubusercontent.com/misode/assets/main/assets/minecraft/textures/item/golden_pickaxe.png" alt="Picareta de Ouro">
+                </div>
+                <div class="card-content">
+                    <div class="card-header">
+                        <h2 class="pickaxe-title gold">Picareta de Ouro</h2>
+                        <span class="badge">Durabilidade: 32 | Velocidade: 12x</span>
+                    </div>
+                    <p class="description">A picareta mais rápida do jogo em quebrar blocos básicos e possui alta taxa de encantabilidade. Porém, quebra extremamente rápido (apenas 32 usos) e não minera diamantes.</p>
+                </div>
+            </div>
 
-.grid {
-    display: flex;
-    flex-direction: column;
-    gap: 22px;
-}
+            <!-- Picareta de Diamante -->
+            <div class="card diamond-card">
+                <div class="card-icon">
+                    <img src="https://raw.githubusercontent.com/misode/assets/main/assets/minecraft/textures/item/diamond_pickaxe.png" alt="Picareta de Diamante">
+                </div>
+                <div class="card-content">
+                    <div class="card-header">
+                        <h2 class="pickaxe-title diamond">Picareta de Diamante</h2>
+                        <span class="badge">Durabilidade: 1561 | Velocidade: 8x</span>
+                    </div>
+                    <p class="description">O símbolo clássico de conquista no Minecraft. Consegue minerar qualquer bloco do jogo (incluindo Obsidiana e Detritos Antigos). Extremamente durável e confiável.</p>
+                </div>
+            </div>
 
-.card-wrapper {
-    display: flex;
-    align-items: stretch;
-    gap: 14px;
-}
+            <!-- Picareta de Netherite -->
+            <div class="card netherite-card">
+                <div class="card-icon">
+                    <img src="https://raw.githubusercontent.com/misode/assets/main/assets/minecraft/textures/item/netherite_pickaxe.png" alt="Picareta de Netherite">
+                </div>
+                <div class="card-content">
+                    <div class="card-header">
+                        <h2 class="pickaxe-title netherite">Picareta de Netherite</h2>
+                        <span class="badge">Durabilidade: 2031 | Velocidade: 9x</span>
+                    </div>
+                    <p class="description">O ápice das ferramentas no jogo. Criada ao combinar uma Picareta de Diamante com uma Barra de Netherite na Mesa de Ferreiro. Não flutua e não é destruída ao cair na lava.</p>
+                </div>
+            </div>
 
-/* Slot desenhado do Item (Inventário estilo Minecraft) */
-.item-slot {
-    width: 76px;
-    height: 76px;
-    min-width: 76px;
-    background-color: #8b8b8b;
-    border: 4px solid #000000;
-    box-shadow: 
-        inset -4px -4px 0px #373737,
-        inset 4px 4px 0px #ffffff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
+        </main>
 
-.item-slot img {
-    width: 48px;
-    height: 48px;
-    image-rendering: pixelated;
-}
+        <!-- Dicas de Mineração -->
+        <footer>
+            <h2>💡 Dicas Rápidas de Mineração</h2>
+            <ul>
+                <li><strong>Ordem de Progressão:</strong> Madeira ➔ Pedra ➔ Ferro ➔ Diamante ➔ Netherite.</li>
+                <li><strong>Obsidiana:</strong> Exige no mínimo Picareta de Diamante para ser minerada e coletada.</li>
+                <li><strong>Encantamentos Recomendados:</strong> <em>Eficiência V</em>, <em>Inquebrável III</em>, <em>Remendo (Mending)</em> e <em>Fortuna III</em> (ou <em>Toque Suave</em>).</li>
+            </ul>
+        </footer>
+    </div>
 
-.copper-icon {
-    filter: hue-rotate(-20deg) saturate(1.5);
-}
-
-.card-details {
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-}
-
-.top-row {
-    display: flex;
-    gap: 10px;
-    align-items: center;
-}
-
-/* Caixa Desenhada do Título */
-.title-box {
-    flex-grow: 1;
-    background-color: rgba(20, 16, 14, 0.95);
-    padding: 6px 14px;
-}
-
-.pickaxe-title {
-    font-size: 1.8rem;
-    font-weight: bold;
-    letter-spacing: 1px;
-}
-
-/* Caixa Desenhada dos Atributos */
-.badge-box {
-    background-color: rgba(15, 12, 10, 0.95);
-    padding: 6px 12px;
-    font-size: 1.2rem;
-    color: #ffaa00;
-    white-space: nowrap;
-}
-
-/* Caixa Desenhada da Descrição */
-.info-box {
-    background-color: rgba(26, 20, 18, 0.95);
-    padding: 10px 14px;
-}
-
-.description {
-    font-size: 1.15rem;
-    color: #dddddd;
-    line-height: 1.3;
-}
-
-/* Cores das Picaretas */
-.wood { color: #d49b4b; text-shadow: 2px 2px 0px #000; }
-.stone { color: #cccccc; text-shadow: 2px 2px 0px #000; }
-.copper { color: #e77c56; text-shadow: 2px 2px 0px #000; }
-.iron { color: #ffffff; text-shadow: 2px 2px 0px #000, 0 0 5px rgba(255,255,255,0.5); }
-.gold { color: #fdf55f; text-shadow: 2px 2px 0px #000, 0 0 5px rgba(253,245,95,0.5); }
-.diamond { color: #55ffff; text-shadow: 2px 2px 0px #000, 0 0 6px rgba(85,255,255,0.5); }
-.netherite { color: #bcaaa4; text-shadow: 2px 2px 0px #000, 0 0 5px rgba(188,170,164,0.5); }
-
-/* Rodapé Desenhado */
-.footer-box {
-    margin-top: 30px;
-    background-color: rgba(26, 20, 18, 0.95);
-    padding: 20px;
-}
-
-.footer-box h2 {
-    font-size: 1.8rem;
-    color: #ffff55;
-    margin-bottom: 10px;
-}
-
-.footer-box ul {
-    list-style-position: inside;
-    color: #aaaaaa;
-    font-size: 1.2rem;
-    line-height: 1.6;
-}
-
-.footer-box li strong {
-    color: #ffffff;
-}
-
-/* Ajuste Responsivo para Dispositivos Móveis */
-@media (max-width: 650px) {
-    .card-wrapper {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .item-slot {
-        width: 80px;
-        height: 80px;
-    }
-
-    .top-row {
-        flex-direction: column;
-        width: 100%;
-    }
-
-    .title-box, .badge-box {
-        text-align: center;
-        width: 100%;
-    }
-
-    .badge-box {
-        white-space: normal;
-    }
-
-    .header-box h1 {
-        font-size: 1.1rem;
-    }
-}
+</body>
+</html>
